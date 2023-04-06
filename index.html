@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAPISHI SIMPLIFIED</title>
     <!--Favicon-->
-    <link rel="icon" type="image/png" href="./tokiti.png"/>
+    <link rel="icon" type="image/png" href="./assets/tokiti.png"/>
     <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
     <div id="container" class="container">
         <h1>Mapishi Simplified</h1>
-        <div class="recipes-ingredients">
-            <form class="recipes-ingredients" id="submit-form">
+        <p>Search for your favorite recipes and use them to plan your daily meals</p>
+        <div class="recipes">
+            <form class="recipes" id="submit-form">
                 <input type="text" id="search-input" placeholder="Search Recipes">
                 <button class="search-btn" id="search-btn" type="submit">search</button>
             </form>
           
         </div>
         <div id="result-heading"></div>
-        <div id="recipes" class="recipes"></div>
+        <div id="meals" class="meals"></div>
+        <div id="single-meal"></div>
 
     </div>
     <script src="./index.js"></script>

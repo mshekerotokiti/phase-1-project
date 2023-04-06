@@ -20,7 +20,8 @@
     text-align: center;
     font-size: 200%;
   }
-  .recipes-ingredients {
+
+  .recipes{
     display: flex;
   }
   
@@ -46,4 +47,3 @@
     border-bottom-right-radius: 4px;
   }
 
-  
