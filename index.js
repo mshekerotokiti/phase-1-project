@@ -4,8 +4,9 @@
 const searchInput = document.querySelector("#search-input")
  const submitForm = document.querySelector("#submit-form")
  const resultHeading = document.querySelector("#result-heading")
- const recipes = document.querySelector("#meals")
+ const mealsEl = document.querySelector("#meals")
  const singleMeal = document.querySelector("#single-meal")
+ const randomBtn = document.querySelector("#random-btn")
  const containerEl = document.querySelector("#container");
 
 //preventing default action
@@ -20,7 +21,7 @@ function searchMeal(event){
 
     //check for null input
     if(searchTerm.trim()){
-        //serach URL
+        //search URL
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
         .then((response) => response.json()) //promise as JSON
         .then((mealData) => {                    //promise with data
@@ -57,17 +58,25 @@ function searchMeal(event){
         //to contain the error message
         let errorDiv = document.createElement("div");
         errorDiv.classList.add("error-message");
-        errorDiv.textContent = "<p>PLease enter search terms</>"; //insert text with the meaasge
+        errorDiv.textContent = "<p>PLease enter search terms</>"; //insert text with the message
         containerEl.appendChild(errorDiv);       //append div to the container
-        setTimeout(clearErrorMessage, 5000);     //interval taken to remove error messaging
+        setTimeout(clearErrorMessage, 5000);     //interval taken to remove error message
     
     }
 
     //remove error message
+function clearErrorMessage(){
+    let errorMessage = document.querySelector(".error-message");
+    errorMessage.remove();
+}
 
 }
 
- //fetching data from the API by ID
+ //fetching meal from the API by ID
  function getMealById(mealId){
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    .then((res) => res.json())
+    .then((recipeData) => {
+        const meal = recipeData.meals[0]
+    })
  }
