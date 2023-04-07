@@ -15,7 +15,10 @@
 This project is coded by Sharon Tokiti, You can reach me through:
 
  Github :https://github.com/mshekerotokiti
+
  email: sharontokiti@gmail.com 
+
+ twitter: https://twitter.com/SharonTokiti
 
  # License
  MIT License
