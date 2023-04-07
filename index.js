@@ -12,64 +12,64 @@ const searchInput = document.querySelector("#search-input")
 
 
 
-// //preventing default action
-// function searchMeal(event){
-//     event.preventDefault();
+//preventing default action
+function searchMeal(event){
+    event.preventDefault();
 
-//     // clear meal
-//     singleMeal.textContent = "";
+    // clear meal
+    singleMeal.textContent = "";
 
-//     //get search tearm
-//     const searchTerm = searchInput.value;
+    //get search tearm
+    const searchTerm = searchInput.value;
 
-//     //check for null input
-//     if(searchTerm.trim()){
-//         //search URL
-//         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
-//         .then((response) => response.json()) //promise as JSON
-//         .then((mealData) => {                    //promise with data
-//             //adding the heading with the search term included
-//             resultHeading.textContent = `Search results for ${searchTerm}:`
+    //check for null input
+    if(searchTerm.trim()){
+        //search URL
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
+        .then((response) => response.json()) //promise as JSON
+        .then((mealData) => {                    //promise with data
+            //adding the heading with the search term included
+            resultHeading.textContent = `Search results for ${searchTerm}:`
 
-//             //check to find meals with search input
-//             if(mealData.meals === null){
-//                 resultHeading.textContent = `No results.  Please try again!`;
-//             }
-//             else{
-//                 mealsEl.textContent = mealData.meals
-//                 //include html
-//                 .map((meal) => 
-//                     `<div classs= "meal">
-//                     <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
-//                     <div class="meal-info" data-mealID="${meal.idMeal}">
-//                     <h3>${meal.strMeal}
-//                     </h3>
-//                     </div>
-//                     </div> `
-//                 )
-//                 //turn the array into a string
-//                 .join("");
-//             }
-//         }
-//         );
-//     }
-//     else{
-//         //to contain the error message
-//         let errorDiv = document.createElement("div");
-//         errorDiv.classList.add("error-message");
-//         errorDiv.textContent = "Please enter search terms"; //insert text with the message
-//         containerEl.appendChild(errorDiv);       //append div to the container
-//         setTimeout(clearErrorMessage, 3000);     //interval taken to remove error message
+            //check to find meals with search input
+            if(mealData.meals === null){
+                resultHeading.textContent = `No results.  Please try again!`;
+            }
+            else{
+                mealsEl.textContent = mealData.meals
+                //include html
+                .map((meal) => 
+                    `<div classs= "meal">
+                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                    <div class="meal-info" data-mealID="${meal.idMeal}">
+                    <h3>${meal.strMeal}
+                    </h3>
+                    </div>
+                    </div> `
+                )
+                //turn the array into a string
+                .join("");
+            }
+        }
+        );
+    }
+    else{
+        //to contain the error message
+        let errorDiv = document.createElement("div");
+        errorDiv.classList.add("error-message");
+        errorDiv.textContent = "Please enter search terms"; //insert text with the message
+        containerEl.appendChild(errorDiv);       //append div to the container
+        setTimeout(clearErrorMessage, 3000);     //interval taken to remove error message
     
-//     }
+    }
 
-//     //remove error message
-// function clearErrorMessage(){
-//     let errorMessage = document.querySelector(".error-message");
-//     errorMessage.remove();
-// }
+    //remove error message
+function clearErrorMessage(){
+    let errorMessage = document.querySelector(".error-message");
+    errorMessage.remove();
+}
 
-// }
+}
 
  //fetching meal details from the API by name
  function getMeal(mealName){
@@ -129,8 +129,6 @@ function addMealToDOM(meal) {
     </div>
   </div>
   );
-
-  let createMeal
  }
 
  //add event listeners
