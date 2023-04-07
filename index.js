@@ -30,7 +30,7 @@ function searchMeal(e) {
 
         //check to see if any meals with searchTerm
         if (mealData.meals === null) {
-          resultHeadingEl.innerHTML = `<p>That search yielded no results.  Please try again!</p>`;
+          resultHeadingEl.innerHTML = `<p>That search yielded no results. Please try again!</p>`;
         } else {
           mealsEl.innerHTML = mealData.meals
             .map(

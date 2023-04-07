@@ -12,7 +12,8 @@
 ![A screenshot of mapishi site](assets/Screenshot%20from%202023-04-07%2014-32-12.png)
 
 # AUTHOR
-This project is coded by Sharon Tokiti
+This project is coded by Sharon Tokiti, You can reach me through:
+
  Github :https://github.com/mshekerotokiti
  email: sharontokiti@gmail.com 
 
