@@ -14,11 +14,20 @@
         <h1>Mapishi Simplified</h1>
         <p>Search for your favorite recipes and use them to plan your daily meals</p>
         <div class="recipes">
-            <form class="recipes" id="submit-form">
-                <input type="text" id="search-input" placeholder="Search Recipes">
-                <button class="search-btn" id="search-btn" type="submit">search</button>
-            </form>
-            <button class="random-btn" id="random-btn">random</button>
+            <table>
+                <tr>
+                    <th>
+                       <form>
+                         <input type="text" id="search-input" placeholder="e.g. chicken, cake">
+                         <input type="submit" id="meals" name="recipes" value="Find meals">
+                       </form>
+                    </th>
+                    <th>&nbsp;&nbsp;OR&nbsp;&nbsp;</th>
+                    <th>
+                        <button onclick="getRandomMeal()">Random Meal</button>
+                    </th>
+                </tr>
+            </table>
           
         </div>
         <div id="result-heading"></div>
