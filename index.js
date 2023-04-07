@@ -36,7 +36,7 @@ function searchMeal(event){
                 mealsEl.textContent = mealData.meals
                 //include html
                 .map((meal) => 
-                    `<div classs= "meal>
+                    `<div classs= "meal">
                     <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
                     <div class="meal-info" data-mealID="${meal.idMeal}">
                     <h3>${meal.strMeal}
