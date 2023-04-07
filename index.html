@@ -12,32 +12,22 @@
 <body>
     <div id="container" class="container">
         <h1>Mapishi Simplified</h1>
-        <p>Search for your favorite recipes and use them to plan your daily meals</p>
-        <div class="recipes">
-            <table>
-                <tr>
-                    <th>
-                       <form>
-                         <input type="text" id="search-input" placeholder="e.g. chicken, cake">
-                         <input type="submit" id="meals" name="recipes" value="Find meals">
-                       </form>
-                    </th>
-                    <th>&nbsp;&nbsp;OR&nbsp;&nbsp;</th>
-                    <th>
-                        <button onclick="getRandomMeal()">Random Meal</button>
-                    </th>
-                </tr>
-            </table>
+        <p>Search for your favorite meals</p>
+             <div class="flex">
+                <form class="flex" id="submit-form">
+                 <input type="text" id="search-input" placeholder="Search for meals by keywords..." />
+                    <button class="search-btn" id="search-btn" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                  <button class="random-btn" id="random-btn">
+                    <i class="fas fa-random"></i>
+                  </button>
+            </div>
           
-        </div>
-        <div id="result-heading"></div>
-        <div id="meals" class="meals"></div>
-        <div id="single-meal"></div>
-        <p id ="js-error-message" class="js-error-message"></p>
-        <section id="results" class="hidden">
-          <ul id="results-list"></ul>
-        </section>
-
+             <div id="result-heading"></div>
+             <div id="meals" class="meals"></div>
+             <div id="single-meal"></div>
     </div>
     <script src="./index.js"></script>
 </body>
