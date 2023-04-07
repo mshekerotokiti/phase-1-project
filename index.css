@@ -21,7 +21,7 @@
     font-size: 150%;
   }
 
-  .flex{
+  .recipes{
     display: flex;
   }
   
@@ -54,7 +54,7 @@
   }
   .single-meal ul li {
     display: block;
-    color: #2d2013;
+    color: #262525;
     font-size: 15px;
     font-weight: bold;
     padding: 5px;
